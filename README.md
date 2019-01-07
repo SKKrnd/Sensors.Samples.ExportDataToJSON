@@ -14,7 +14,7 @@ Projekt aplikacji konsolowej .NET Core, obrazujący sposób na pobranie odczytó
 **orderUnitId** - identyfikator GUID jednostki logistycznej zamówienia. 
 
 # Autoryzacja
-Do autoryzacji wykorzystywany jest protokół [OAuth2](https://oauth.net). Użytkownik autoryzuje się przy użyciu **clientId** oraz **clientSecret** w zewnętrznym serwisie identyfikacyjnym https://identity.skkhive.com/. Serwer udostępnia użytkownikowi **accessToken**, który jest potrzebny do uzyskania dostępu do zasobów. 
+Do autoryzacji wykorzystywany jest protokół [OAuth2](https://oauth.net). Użytkownik autoryzuje się przy użyciu **clientId** oraz **clientSecret** w zewnętrznym serwisie identyfikacyjnym https://identity.skkhive.com. Serwer udostępnia użytkownikowi **accessToken**, który jest potrzebny do uzyskania dostępu do zasobów. 
 
 # Przygotowanie do uruchomienia
 1. Uzupełnić **clientId** i **clientSecret** w pliku Program.cs.
