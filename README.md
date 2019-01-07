@@ -24,7 +24,7 @@ Do autoryzacji wykorzystywany jest protokół [OAuth2](https://oauth.net). Użyt
 				Tokens.ClientId = "<clientId>";
 				Tokens.ClientSecret = "<clientSecret>";
 	```
-2. Pobrać identyfikatory **orderId** i **orderUnitId** zamówienia ze strony [SKK Sensor](https://sensor.skkhive.com/) - będą wymagane do ściągnięcie danych.
+2. Pobrać identyfikatory **orderId** i **orderUnitId** zamówienia ze strony [SKK Hive Sensor](https://sensor.skkhive.com/) - będą wymagane do ściągnięcie danych.
 
 Program jest przygotowany do uruchomienia.
 
