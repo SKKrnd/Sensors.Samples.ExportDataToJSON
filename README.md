@@ -1,20 +1,34 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Wstęp
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Projekt aplikacji konsolowej .NET Core, obrazujący sposób na pobranie odczytów dla określonego **orderId** i **orderUnitId**.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Terminologia
+**clientId** – id klienta. Publiczny kod będący identyfikatorem klienta. Nadawany przez firmę SKK.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+**clientSecret** – prywatny klucz służący do autoryzacji. Nadawany przez firmę SKK.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+**accessToken** – ciąg znaków określający zasoby, do których ma dostęp dany użytkownik. Wydawany jest przez serwer autoryzacyjny. 
+
+**orderId** - identyfikator GUID zamówienia. 
+
+**orderUnitId** - identyfikator GUID jednostki logistycznej zamówienia. 
+
+# Autoryzacja
+Do autoryzacji wykorzystywany jest protokół [OAuth2](https://oauth.net). Użytkownik autoryzuje się przy użyciu **clientId** oraz **clientSecret** w zewnętrznym serwisie identyfikacyjnym https://identity.skkhive.com/. Serwer udostępnia użytkownikowi **accessToken**, który jest potrzebny do uzyskania dostępu do zasobów. 
+
+# Przygotowanie do uruchomienia
+1. Uzupełnić **clientId** i **clientSecret** w pliku Program.cs.
+	``` C#
+	static async Task Main(string[] args)
+			{
+				Tokens.ClientId = "<clientId>";
+				Tokens.ClientSecret = "<clientSecret>";
+	```
+2. Pobrać identyfikatory **orderId** i **orderUnitId** zamówienia ze strony [SKK Sensor](https://sensor.skkhive.com/) - będą wymagane do ściągnięcie danych.
+
+Program jest przygotowany do uruchomienia.
+
+# Pomoc
+W celu uzyskania pomoc, proszę kontaktować się z działem R&D firmy [SKK S.A](https://www.skk.com.pl/pl/kontakt.html).
+
+![RnD Logo](RnDLogo.jpeg)
