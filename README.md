@@ -17,6 +17,8 @@ Projekt aplikacji konsolowej .NET Core, obrazujący sposób na pobranie odczytó
 Do autoryzacji wykorzystywany jest protokół [OAuth2](https://oauth.net). Użytkownik autoryzuje się przy użyciu **clientId** oraz **clientSecret** w zewnętrznym serwisie identyfikacyjnym https://identity.skkhive.com. Serwer udostępnia użytkownikowi **accessToken**, który jest potrzebny do uzyskania dostępu do zasobów. 
 
 # Przygotowanie do uruchomienia
+**TargetFramework** : [.Net Core 2.2](https://dotnet.microsoft.com/download)
+
 1. Uzupełnić **clientId** i **clientSecret** w pliku Program.cs.
 	``` C#
 	static async Task Main(string[] args)

@@ -19,7 +19,7 @@ namespace Sensors.Samples.ExportDataToJSON
             Console.WriteLine("Please pass orderUnitId :");
             var orderUnitId = Console.ReadLine();
             //
-            var outputFilePath = @"D:\OrderUnitReadings.json";
+            var outputFilePath = Directory.GetCurrentDirectory() + "\\OrderUnitReadings.json";
             if (File.Exists(outputFilePath))
                 File.Delete(outputFilePath);
             //
