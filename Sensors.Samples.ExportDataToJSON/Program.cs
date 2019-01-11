@@ -29,7 +29,7 @@ namespace Sensors.Samples.ExportDataToJSON
             var tokenResponse = await token.RequestTokenAsync();
             
             // Uri contains of orderID and orderUnitID given given as a parameter to program and user's accesstoken
-            var uri = new Uri($"https://skk-sensors-functions-pro.azurewebsites.net/api/ExportOrderUnitDataToJSON" +
+            var uri = new Uri($"https://sensor-functions.skkhive.com//api/ExportOrderUnitDataToJSON" +
                 $"?orderId={orderId}" +
                 $"&orderUnitId={orderUnitId}" +
                 $"&accessToken={tokenResponse.AccessToken}");
